@@ -1,0 +1,162 @@
+﻿@model CourseEnrollToStudentViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CourseEnrollToStudent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert-danger">@ViewBag.Message</div>
+
+        }
+
+        @if (ViewBag.CourseExistMessage != null)
+        {
+            <div class="alert-danger">@ViewBag.CourseExistMessage</div>
+
+        }
+        
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label"></label>
+                <select asp-for="StudentId" name="StudentId" id="StudentId" asp-items="ViewBag.StudentId" class="form-control">
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" id="StudentName" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" id="Email" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DepartmentId" class="control-label"></label>
+                <input asp-for="DepartmentId" name="DepartmentId" id="DepartmentId" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CourseId" class="control-label"></label>
+                <select asp-for="CourseId" name="CourseId" id="CourseId" class="form-control">
+                    <option value="">--select--</option>
+                </select>
+
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnrollDate" class="control-label"></label>
+                <input asp-for="EnrollDate" id="EnrollDate" class="form-control" />
+                <span asp-validation-for="EnrollDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        $("#StudentId").change(function () {
+            var studentId = $("#StudentId").val();
+            var json = { studentId: studentId };
+
+            $.ajax({
+
+                type: "POST",
+                url: "/CourseEnrollToStudent/GetStudentInfoBy",
+                data: json,
+
+                success: function (response) {
+                    var student = response;
+
+                    $("#StudentName").empty();
+                    $("#Email").empty();
+                    $("#DepartmentId").empty();
+
+                    $("#StudentName").val(student.studentName);
+                    $("#Email").val(student.email);
+                    $("#DepartmentId").val(student.departmentId);
+                    //var departmentId = student.DepartmentId;
+                    //$("#CourseId").empty();
+                    //var jsonData = { departmentId : departmentId };
+                    ////$("#DepartmentId").change(function () {
+
+                    ////    var departmentId = $("#DepartmentId").val();
+                    ////    var json = { departmentId: departmentId };
+
+
+                    //    $.ajax({
+                    //        type: "POST",
+                    //        url: "/CourseEnrollToStudent/GetAllCourseBy",
+
+                    //        data: jsonData,
+                    //        success: function (response) {
+                    //            var course = response;
+
+                    //            //$("#CourseId").empty();
+                    //            //var emptyOption = "<option value=''>--select--</option>";
+                    //            //$("#CourseId").append(emptyOption);
+                    //            $.each(course, function (key, course) {
+
+                    //                var option = "<option value= '" + course.courseId + "'>" + course.courseCode + "</option>";
+                    //                $('#CourseId').append(option);
+
+                    //            });
+                    //        },
+
+                    var deptId = $("#DepartmentId").val();
+                    $("#CourseId").empty();
+                    var jsonData = {
+                        departmentId: deptId
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/CourseEnrollToStudent/GetAllCourseBy",
+
+                        data: jsonData,
+                        success: function (response) {
+                            var course = response;
+                            $("#CourseId").empty();
+                            var emptyOption = "<option value=''>--select--</option>";
+                            $("#CourseId").append(emptyOption);
+                            $.each(course, function (key, course) {
+
+                                var option = "<option value= '" + course.courseId + "'>" + course.courseName + "</option>";
+                                $('#CourseId').append(option);
+                            });
+
+
+                        },
+
+
+
+                    });
+                }
+
+            });
+
+        });
+
+    </script>
+   
+  
+}

@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\UniversityApp\University.Configuration\bin\Debug\netcoreapp2.2\University.Configuration.deps.json
+C:\Users\User\source\repos\UniversityApp\University.Configuration\bin\Debug\netcoreapp2.2\University.Configuration.dll
+C:\Users\User\source\repos\UniversityApp\University.Configuration\bin\Debug\netcoreapp2.2\University.Configuration.pdb
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.csprojAssemblyReference.cache
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.AssemblyInfo.cs
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.dll
+C:\Users\User\source\repos\UniversityApp\University.Configuration\obj\Debug\netcoreapp2.2\University.Configuration.pdb

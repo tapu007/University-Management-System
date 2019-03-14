@@ -1,0 +1,47 @@
+﻿@model IEnumerable<University.Models.EntityModels.Course>
+
+<table class="table table-bordered table-active">
+    <thead>
+        <tr class="label-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.CourseCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Credit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SemesterId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="active">
+                <td>
+                    @item.CourseCode
+                </td>
+                <td>
+                    @item.CourseName
+                </td>
+                <td>
+                    @item.Credit
+                </td>
+                <td>
+                    @item.DepartmentId
+                </td>
+                <td>
+                    @item.SemesterId
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

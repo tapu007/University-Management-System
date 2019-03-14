@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\bin\Debug\netcoreapp2.2\University.DatabaseContexts.deps.json
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\bin\Debug\netcoreapp2.2\University.DatabaseContexts.dll
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.csprojAssemblyReference.cache
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.AssemblyInfo.cs
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\bin\Debug\netcoreapp2.2\University.DatabaseContexts.pdb
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\bin\Debug\netcoreapp2.2\University.Models.dll
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\bin\Debug\netcoreapp2.2\University.Models.pdb
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.csproj.CopyComplete
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.dll
+C:\Users\User\source\repos\UniversityApp\University.DatabaseContexts\obj\Debug\netcoreapp2.2\University.DatabaseContexts.pdb

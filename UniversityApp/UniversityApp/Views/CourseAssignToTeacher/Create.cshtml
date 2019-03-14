@@ -1,0 +1,212 @@
+﻿@model CourseAssignToTeacherViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CourseAssignToTeacher</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert-danger">
+                @ViewBag.Message
+            </div>
+        }
+        @if (ViewBag.CourseExistMessage != null)
+        {
+            <div class="alert-danger">
+                @ViewBag.CourseExistMessage
+            </div>
+        }
+       
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DepartmentId" class="control-label"></label>
+                <select asp-for="DepartmentId" name="DepartmentId" id="DepartmentId" asp-items="ViewBag.DepartmentId" class="form-control">
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeacherId" class="control-label"></label>
+                <select asp-for="TeacherId" name="TeacherId" id="TeacherId" class="form-control">
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="TeacherId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CredittobeTaken" class="control-label"></label>
+                <input asp-for="CredittobeTaken" name="CreditToBeTaken" id="CreditToBeTaken" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="CredittobeTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemainingCredit" class="control-label"></label>
+                <input asp-for="RemainingCredit" name="RemainingCredit" id="RemainingCredit" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="RemainingCredit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseId" class="control-label"></label>
+                <select asp-for="CourseId" name="CourseId" id="CourseId" class="form-control">
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" name="CourseName" id="CourseName" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Credit" class="control-label"></label>
+                <input asp-for="Credit" name="Credit" id="Credit" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="Credit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+<script>
+    $("#DepartmentId").change(function () {
+        var departmentId = $("#DepartmentId").val();
+        var json = { departmentId: departmentId }
+
+        $.ajax({
+
+            type: "POST",
+            url: "/CourseAssignToTeacher/GetTeacherBy",
+            data: json,
+            success: function (response) {
+                var teacher = response;
+                $("#TeacherId").empty();
+                var emptyOption = "<option value=''>--select--</option>";
+                $("#TeacherId").append(emptyOption);
+                $.each(teacher, function (key, teacher) {
+
+                    var option = "<option value= '" + teacher.teacherId + "'>" + teacher.teacherName + "</option>";
+                    $('#TeacherId').append(option);
+                });
+
+
+            },
+            error: function (response) {
+
+                alert(response.message);
+            }
+
+        });
+        $.ajax({
+
+            type: "POST",
+            url: "/CourseAssignToTeacher/GetCourseBy",
+            data: json,
+            success: function (response) {
+                var course = response;
+                $("#CourseId").empty();
+                var emptyOption = "<option value=''>--select--</option>";
+                $("#CourseId").append(emptyOption);
+                $.each(course, function (key, course) {
+
+                    var option = "<option value= '" + course.courseId + "'>" + course.courseCode + "</option>";
+                    $('#CourseId').append(option);
+                });
+
+
+            },
+            error: function (response) {
+
+                alert(response.message);
+            }
+
+        });              
+    });
+
+    $("#TeacherId").change(function () {
+        var teacherId = $("#TeacherId").val();
+        var jsonData = { teacherId: teacherId }
+
+        $.ajax({
+
+            type: "POST",
+            url: "/CourseAssignToTeacher/GetTeacherInfoBy",
+
+            data: jsonData,
+            success: function (response) {
+                var teacher = response;
+
+                $("#CreditToBeTaken").empty();
+                //$("#Credit").empty();
+                //$.each(course, function (key, course) {
+
+                //var option = "<option value= '" + course.courseId + "'>" + course.courseCode + "</option>";
+                //$('#CourseId').append(option);
+                $("#CreditToBeTaken").val(teacher.takenCredit);
+                //$("#Credit").val(course.credit);
+                //});
+
+                //$("#CourseName").val(course.CourseName);
+                //var option = "<option value='" + course.courseId + "'>" + course.courseId + "</option>";
+
+
+
+            },
+            error: function (response) {
+
+                alert(response.message);
+            }
+
+        });
+    });
+
+    $("#CourseId").change(function () {
+        var courseId = $("#CourseId").val();
+        var jsonData = { courseId: courseId }
+
+        $.ajax({
+
+            type: "POST",
+            url: "/CourseAssignToTeacher/GetCourseInfoBy",
+
+            data: jsonData,
+            success: function (response) {
+                var course = response;
+                
+                $("#CourseName").empty();
+                $("#Credit").empty();
+                //$.each(course, function (key, course) {
+
+                    //var option = "<option value= '" + course.courseId + "'>" + course.courseCode + "</option>";
+                    //$('#CourseId').append(option);
+                    $("#CourseName").val(course.courseName);
+                    $("#Credit").val(course.credit);
+                //});
+
+                //$("#CourseName").val(course.CourseName);
+                //var option = "<option value='" + course.courseId + "'>" + course.courseId + "</option>";
+               
+
+
+            },
+            error: function (response) {
+
+                alert(response.message);
+            }
+
+        });
+    });
+</script>
+
+                  
+}

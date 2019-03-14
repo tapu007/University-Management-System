@@ -1,0 +1,129 @@
+﻿@model StudentResultViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>StudentResult</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label"></label>
+                <select asp-for="StudentId" asp-items="ViewBag.StudentId" id="StudentId" class="form-control" >
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" id="StudentName" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" id="Email" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentId" class="control-label"></label>
+                <input asp-for="DepartmentId" id="DepartmentId" class="form-control" readonly="@(true)" />
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseId" class="control-label"></label>
+                <select asp-for="CourseId" id="CourseId" class="form-control" >
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradePointId" class="control-label"></label>
+                <select asp-for="GradePointId" id="GradePointId" asp-items=" ViewBag.GradePointId" class="form-control" >
+                    <option value="">--select--</option>
+                </select>
+                <span asp-validation-for="GradePointId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+   <script>
+       $("#StudentId").change(function () {
+           var studentId = $("#StudentId").val();
+           var json = { studentId: studentId };
+
+           $.ajax({
+
+               type: "POST",
+               url: "/StudentResult/GetStudentInfoBy",
+               data: json,
+
+               success: function (response) {
+                   var student = response;
+
+                   $("#StudentName").empty();
+                   $("#Email").empty();
+                   $("#DepartmentId").empty();
+                   
+
+                   $("#StudentName").val(student.studentName);
+                   $("#Email").val(student.email);
+                   $("#DepartmentId").val(student.departmentId);                                             
+                  
+
+
+                    },
+                   error: function (response) {
+
+                        alert(response.message);
+                 }
+
+           });
+       });
+       //$("#StudentId").change(function () {
+       //    var studentId = $("#StudentId").val();
+       //    var json = { studentId: studentId }
+       //    $.ajax({
+
+       //        type: "POST",
+       //        url: "/StudentResult/GetCourseBy",
+       //        data: json,
+       //        success: function (response) {
+       //            var course = response;
+       //            $("#CourseId").empty();
+       //            var emptyOption = "<option value=''>--select--</option>";
+       //            $("#CourseId").append(emptyOption);
+       //            $.each(course, function (key, course) {
+
+       //                var option = "<option value= '" + course.courseId + "'>" + course.courseName + "</option>";
+       //                $('#CourseId').append(option);
+       //            });
+
+
+       //        },
+       //        error: function (response) {
+
+       //            alert(response.message);
+       //        }
+
+       //    });
+
+
+       //});
+                   
+
+    </script>
+}

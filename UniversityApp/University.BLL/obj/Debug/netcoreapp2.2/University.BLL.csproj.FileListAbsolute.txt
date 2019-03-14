@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.BLL.deps.json
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.BLL.dll
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.BLL.pdb
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.AssemblyInfo.cs
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.dll
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.pdb
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.DatabaseContexts.dll
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.Models.dll
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.Repositories.dll
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.Repositories.pdb
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.DatabaseContexts.pdb
+C:\Users\User\source\repos\UniversityApp\University.BLL\bin\Debug\netcoreapp2.2\University.Models.pdb
+C:\Users\User\source\repos\UniversityApp\University.BLL\obj\Debug\netcoreapp2.2\University.BLL.csproj.CopyComplete

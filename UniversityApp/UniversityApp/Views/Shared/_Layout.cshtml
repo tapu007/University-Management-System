@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - UniversityApp</title>
+
+        <environment include="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+                  crossorigin="anonymous"
+                  integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+        </environment>
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style=" border: 1px solid darkmagenta">
+                <a href="/Home/Index" class="navbar-brand">logo</a>
+                <div class="container">
+                    <button type="button" class="navbar-toggler" data-target="#menu" data-toggle="collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav mr-auto" style="border: 1px solid darkmagenta">
+                            <li><a href="/Home/Index" class="nav-link" style="color: white">Home</a></li>
+                            <!--services-->
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SetUp</a>
+
+                                <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                                    <li><a href="/Department/Create" class="nav-link">Department Create</a></li>
+                                    <li><a href="/Course/Create" class="nav-link">Course Create</a></li>
+                                    @*<li><a asp-controller="Department" asp-action="Create" class="nav-link ">Department Entry</a></li>
+                                <li><a asp-controller="Course" asp-action="Create" class="nav-link">Course Entry</a></li>*@
+                                    <li><a asp-controller="Teacher" asp-action="Create" class="nav-link">Teacher Entry</a></li>
+                                    <li><a asp-controller="CourseAssignToTeacher" asp-action="Create" class="nav-link">Course Assign To Teacher</a></li>
+                                    <li><a asp-controller="Student" asp-action="Create" class="nav-link">Student Entry</a></li>
+                                    <li><a asp-controller="AllocateClassRoom" asp-action="Create" class="nav-link">Allocate Class Rooms</a></li>
+                                    <li><a asp-controller="CourseEnrollToStudent" asp-action="Create" class="nav-link">Course Enroll To Student</a></li>
+                                    <li><a asp-controller="StudentResult" asp-action="Create" class="nav-link">Save Student Result</a></li>
+                                    @*<li><a></a></li>*@
+                                </ul>
+                            </li>
+                            <!--contact-->
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contact</a>
+                                <ul class="dropdown-menu bg-dark " style="border: 1px solid darkmagenta">
+                                    <li><a href="" class="nav-link">Head office</a></li>
+                                    <li><a href="" class="nav-link">Branch office</a></li>
+                                </ul>
+
+
+
+
+                            </li>
+                            <!--gallery-->
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gallery</a>
+                                <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                                    <li><a href="" class="nav-link">sport1</a></li>
+                                    <li><a href="" class="nav-link">sport2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav" style="border: 1px solid darkmagenta">
+                            <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal">Login</a></li>
+                            <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+            
+                <div class="modal" id="modal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                &Cross;
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <level>User Name</level>
+                                        <input type="text" name="userName" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <level>Password</level>
+                                        <input type="password" name="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="button" name="btn" value="Login" class="btn btn-success btn-block">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
+            <!--modal2-->
+            <div class="modal" id="modal2">
+                <div class="modal-dialog modal-lg" style="border: 1px solid darkmagenta">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                            &Cross;
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <level>User Name</level>
+                                    <input type="text" name="userName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <level>Email Address</level>
+                                    <input type="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <level>Password</level>
+                                    <input type="password" name="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" name="btn" value="submit" class="btn btn-success btn-block">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">UniversityApp</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Create">Department Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Create">Course Create</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+        </header>
+        <div class="container">
+            <partial name="_CookieConsentPartial" />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2019 - UniversityApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+            </script>
+        </environment>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html>
+
+
+
+
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="jumbotron bg-secondary mb-0" style="color: white">
+        <h2>Up to 50 percent discount to any tour...</h2>
+        <p>Grave it.</p>
+
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style=" border: 1px solid darkmagenta">
+        <a href="" class="navbar-brand">logo</a>
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-target="#menu" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto" style="border: 1px solid darkmagenta">
+                    <li><a href="" class="nav-link" style="color: white">Home</a></li>
+                    <!--services-->
+                    <li class="dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+
+                        <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                            <li><a href="" class="nav-link">Service1</a></li>
+                            <li><a href="" class="nav-link">Service2</a></li>
+                            <li><a href="" class="nav-link">Service3</a></li>
+                            <li><a href="" class="nav-link">Service4</a></li>
+                        </ul>
+                    </li>
+                    <!--contact-->
+                    <li class="dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Contact</a>
+                        <ul class="dropdown-menu bg-dark " style="border: 1px solid darkmagenta">
+                            <li><a href="" class="nav-link">Head office</a></li>
+                            <li><a href="" class="nav-link">Branch office</a></li>
+                        </ul>
+
+
+
+
+                    </li>
+                    <!--gallery-->
+                    <li class="dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Gallery</a>
+                        <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                            <li><a href="" class="nav-link">sport1</a></li>
+                            <li><a href="" class="nav-link">sport2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav" style="border: 1px solid darkmagenta">
+                    <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal">Login</a></li>
+                    <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+
+    <div id="slide" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="css/s1.jpg" class="w-100" height="400" alt="image" />
+                <div class="carousel-caption">
+                    <h2>hello....</h2>
+                    <p>Sunrise or sun up is the moment when the upper limb of the Sun appears on the horizon in the morning...</p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="css/s2.png" class="w-100" height="400" alt="image" />
+                <div class="carousel-caption">
+                    <h2>hello....</h2>
+                    <p>Sunrise or sun up is the moment when the upper limb of the Sun appears on the horizon in the morning...</p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="css/s3.jpg" class="w-100" height="400" alt="image" />
+                <div class="carousel-caption">
+                    <h2>hello....</h2>
+                    <p>Sunrise or sun up is the moment when the upper limb of the Sun appears on the horizon in the morning...</p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="css/s4.jpg" class="w-100" height="400" alt="image" />
+                <div class="carousel-caption">
+                    <h2>hello....</h2>
+                    <p>Sunrise or sun up is the moment when the upper limb of the Sun appears on the horizon in the morning...</p>
+
+                </div>
+            </div>
+        </div>
+        <a href="#slide" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#slide" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+        <ol class="carousel-indicators">
+            <li data-target="#slide" data-slide-to="o" class="active"></li>
+            <li data-target="#slide" data-slide-to="1"></li>
+            <li data-target="#slide" data-slide-to="2"></li>
+            <li data-target="#slide" data-slide-to="3"></li>
+        </ol>
+
+    </div>
+
+    <!--modal2-->
+    <div class="modal" id="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    &Cross;
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <level>User Name</level>
+                            <input type="text" name="userName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <level>Password</level>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="button" name="btn" value="Login" class="btn btn-success btn-block">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="jumbotron h-20 w-100 bg-dark">
+                        <h3>tis...</h3>
+
+                    </div>
+                    <button type="button" class="btn btn-warning " data-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal2-->
+    <div class="modal" id="modal2">
+        <div class="modal-dialog modal-lg" style="border: 1px solid darkmagenta">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    &Cross;
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <level>User Name</level>
+                            <input type="text" name="userName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <level>Email Address</level>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <level>Password</level>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="button" name="btn" value="submit" class="btn btn-success btn-block">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="css/s7.jpg" height="70" width="150">
+                        <h3>tour</h3>
+                        <p style="text-align: left">Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District. </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="css/s6.jpg" height="70" width="150">
+                        <h3>tour</h3>
+                        <p style="text-align: left">Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District. </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none">
+                            <img src="css/s5.jpg" height="70" width="150">
+                            <h3>tour</h3>
+                            <p style="text-align: left">Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District. </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="css/s8.jpg" height="70" width="150">
+                        <h3>tour</h3>
+                        <p style="text-align: left">Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District. </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-6">
+                <img src="css/s6.jpg" height="200" width="100%">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <img src="css/s1.jpg" height="200" width="100%">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-expand bg-dark navbar-dark" style="height: 50px; border: 1px solid red">
+        <div class="container">
+            <ul class="navbar-nav" style="text-decoration: none">
+                <a href="#"><li class="nav-link">ab</li></a>
+                <a href="#"><li class="nav-link">abc</li></a>
+                <a href="#"><li class="nav-link">abd</li></a>
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/cndjs.js"></script>
+    <script src="js/bootstrap.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>*@
