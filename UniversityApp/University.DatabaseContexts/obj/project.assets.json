@@ -4394,11 +4394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj",
       "projectName": "University.DatabaseContexts",
-      "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.DatabaseContexts\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.DatabaseContexts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4417,8 +4417,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Models\\University.Models.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Models\\University.Models.csproj"
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Models\\University.Models.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Models\\University.Models.csproj"
             }
           }
         }

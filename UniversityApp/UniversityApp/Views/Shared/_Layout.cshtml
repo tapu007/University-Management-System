@@ -18,126 +18,137 @@
         <link rel="stylesheet" href="~/css/site.css" />
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style=" border: 1px solid darkmagenta">
-                <a href="/Home/Index" class="navbar-brand">logo</a>
-                <div class="container">
-                    <button type="button" class="navbar-toggler" data-target="#menu" data-toggle="collapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="navbar-nav mr-auto" style="border: 1px solid darkmagenta">
-                            <li><a href="/Home/Index" class="nav-link" style="color: white">Home</a></li>
-                            <!--services-->
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SetUp</a>
 
-                                <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
-                                    <li><a href="/Department/Create" class="nav-link">Department Create</a></li>
-                                    <li><a href="/Course/Create" class="nav-link">Course Create</a></li>
-                                    @*<li><a asp-controller="Department" asp-action="Create" class="nav-link ">Department Entry</a></li>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top " style=" border: 1px solid darkmagenta">
+            <a href="/Home/Index" class="navbar-brand">logo
+                @*<img id="logo" class="d-inline-block mr-1" height="30" width="40" alt="Logo" src="~/Images/logo.jpg">*@
+            </a>
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-target="#menu" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mr-auto" style="border: 1px solid darkmagenta">
+                        <li><a href="/Home/Index" class="nav-link" style="color: white">Home</a></li>
+                        <!--services-->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SetUp</a>
+
+                            <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                                <li><a href="/Department/Create" class="nav-link">Department Create</a></li>
+                                <li><a href="/Course/Create" class="nav-link">Course Create</a></li>
+                                @*<li><a asp-controller="Department" asp-action="Create" class="nav-link ">Department Entry</a></li>
                                 <li><a asp-controller="Course" asp-action="Create" class="nav-link">Course Entry</a></li>*@
-                                    <li><a asp-controller="Teacher" asp-action="Create" class="nav-link">Teacher Entry</a></li>
-                                    <li><a asp-controller="CourseAssignToTeacher" asp-action="Create" class="nav-link">Course Assign To Teacher</a></li>
-                                    <li><a asp-controller="Student" asp-action="Create" class="nav-link">Student Entry</a></li>
-                                    <li><a asp-controller="AllocateClassRoom" asp-action="Create" class="nav-link">Allocate Class Rooms</a></li>
-                                    <li><a asp-controller="CourseEnrollToStudent" asp-action="Create" class="nav-link">Course Enroll To Student</a></li>
-                                    <li><a asp-controller="StudentResult" asp-action="Create" class="nav-link">Save Student Result</a></li>
-                                    @*<li><a></a></li>*@
-                                </ul>
-                            </li>
-                            <!--contact-->
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contact</a>
-                                <ul class="dropdown-menu bg-dark " style="border: 1px solid darkmagenta">
-                                    <li><a href="" class="nav-link">Head office</a></li>
-                                    <li><a href="" class="nav-link">Branch office</a></li>
-                                </ul>
+                                <li><a asp-controller="Teacher" asp-action="Create" class="nav-link">Teacher Entry</a></li>
+                                <li><a asp-controller="CourseAssignToTeacher" asp-action="Create" class="nav-link">Course Assign To Teacher</a></li>
+                                <li><a asp-controller="Student" asp-action="Create" class="nav-link">Student Entry</a></li>
+                                <li><a asp-controller="AllocateClassRoom" asp-action="Create" class="nav-link">Allocate Class Rooms</a></li>
+                                <li><a asp-controller="CourseEnrollToStudent" asp-action="Create" class="nav-link">Course Enroll To Student</a></li>
+                                <li><a asp-controller="StudentResult" asp-action="Create" class="nav-link">Save Student Result</a></li>
+                                @*<li><a></a></li>*@
+                            </ul>
+                        </li>
+                        <!--contact-->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">View</a>
+                            <ul class="dropdown-menu bg-dark " style="border: 1px solid darkmagenta">
+                                <li><a href="" class="nav-link">View Course Statics</a></li>
+                                <li><a href="" class="nav-link">View CSRA Information</a></li>
+                                <li><a href="" class="nav-link">View Result</a></li>
+                                <li><a href="" class="nav-link">View All Departments</a></li>
+
+                            </ul>
 
 
 
 
-                            </li>
-                            <!--gallery-->
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gallery</a>
-                                <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
-                                    <li><a href="" class="nav-link">sport1</a></li>
-                                    <li><a href="" class="nav-link">sport2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav" style="border: 1px solid darkmagenta">
-                            <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal">Login</a></li>
-                            <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </nav>
-            
-                <div class="modal" id="modal">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"></button>
-                                &Cross;
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post">
-                                    <div class="form-group">
-                                        <level>User Name</level>
-                                        <input type="text" name="userName" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <level>Password</level>
-                                        <input type="password" name="password" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="button" name="btn" value="Login" class="btn btn-success btn-block">
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            
-            <!--modal2-->
-            <div class="modal" id="modal2">
-                <div class="modal-dialog modal-lg" style="border: 1px solid darkmagenta">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"></button>
-                            &Cross;
-                        </div>
-                        <div class="modal-body">
-                            <form action="" method="post">
-                                <div class="form-group">
-                                    <level>User Name</level>
-                                    <input type="text" name="userName" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <level>Email Address</level>
-                                    <input type="email" name="email" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <level>Password</level>
-                                    <input type="password" name="password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <input type="button" name="btn" value="submit" class="btn btn-success btn-block">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
-                        </div>
-                    </div>
+                        </li>
+                        <!--gallery-->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Unassign</a>
+                            <ul class="dropdown-menu bg-dark" style="border: 1px solid darkmagenta">
+                                <li><a href="/UnAssignAllCourses/UnAssignAllCourses" class="nav-link">Unassign All Courses</a></li>
+                                <li><a href="/UnAllocateAllClassRoom/UnAllocateAllClassRoom" class="nav-link">Unallocate All Class Room</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    @*<nav class="navbar  bg-dark  navbar-dark ">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </nav>*@
+                    <ul class="navbar-nav" style="border: 1px solid darkmagenta">
+                        <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal">Login</a></li>
+                        <li><a href="" class="nav-link" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
+                    </ul>
                 </div>
             </div>
 
-            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        </nav>
+
+        <div class="modal" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        &Cross;
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <level>User Name</level>
+                                <input type="text" name="userName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <level>Password</level>
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="button" name="btn" value="Login" class="btn btn-success btn-block">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--modal2-->
+        <div class="modal" id="modal2">
+            <div class="modal-dialog modal-lg" style="border: 1px solid darkmagenta">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        &Cross;
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <level>User Name</level>
+                                <input type="text" name="userName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <level>Email Address</level>
+                                <input type="email" name="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <level>Password</level>
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="button" name="btn" value="submit" class="btn btn-success btn-block">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">UniversityApp</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -162,17 +173,17 @@
                 </div>
             </div>
         </nav>*@
-        </header>
+
+
         <div class="container">
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
-        </div>
-
+        </div>      
         <footer class="border-top footer text-muted">
             <div class="container">
-                &copy; 2019 - UniversityApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                &copy; 2019 - Question_Mark? Group - all rights reserved- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
         </footer>
 

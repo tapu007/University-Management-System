@@ -30,6 +30,8 @@ namespace UniversityApp.Models
         public string CourseName { get; set; }
         [Required(ErrorMessage = "Please select teacher name")]
         public double Credit { get; set; }
+        [Required]
+        public bool IsActive { get; set; }
         //public List<SelectListItem> Depatrtments { get; set; }
     }
 }

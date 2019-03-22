@@ -3,7 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.2</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\node_modules\**" />
+    <Content Remove="wwwroot\lib\node_modules\**" />
+    <EmbeddedResource Remove="wwwroot\lib\node_modules\**" />
+    <None Remove="wwwroot\lib\node_modules\**" />
+  </ItemGroup>
 
 
   <ItemGroup>
@@ -16,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\University.BLL\University.BLL.csproj" />
+    <ProjectReference Include="..\University.Configuration\University.Configuration.csproj" />
     <ProjectReference Include="..\University.DatabaseContexts\University.DatabaseContexts.csproj" />
     <ProjectReference Include="..\University.Repositories\University.Repositories.csproj" />
   </ItemGroup>

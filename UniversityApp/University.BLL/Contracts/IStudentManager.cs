@@ -8,5 +8,6 @@ namespace University.BLL.Contracts
     public interface IStudentManager:IManager<Student>
     {
         bool IsStudentRegNoExist(string regNo);
+
     }
 }

@@ -19,6 +19,11 @@ namespace University.BLL.Manager
           return  _repository.Add(entity);
         }
 
+        //public virtual bool update()
+        //{
+
+          
+        //}
         public virtual ICollection<T> GetAll()
         {
             return _repository.GetAll();

@@ -32,6 +32,12 @@ namespace UniversityApp.AutoMapper
 
             CreateMap<DesignationViewModel, Designation>();
             CreateMap<Designation, DesignationViewModel>();
+
+            CreateMap<AllocateClassRoomViewModel, AllocateClassRoom>();
+            CreateMap<AllocateClassRoom, AllocateClassRoomViewModel>();
+
+            CreateMap<StudentResultViewModel, StudentResult>();
+            CreateMap<StudentResult, StudentResultViewModel>();
         }
     }
 }

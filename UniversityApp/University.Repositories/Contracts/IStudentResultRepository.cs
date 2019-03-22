@@ -7,5 +7,6 @@ namespace University.Repositories.Contracts
 {
     public interface IStudentResultRepository : IRepository<StudentResult>
     {
+        bool IsResultExist(StudentResult studentResult);
     }
 }

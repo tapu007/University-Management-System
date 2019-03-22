@@ -4760,6 +4760,22 @@
           "bin/placeholder/University.BLL.dll": {}
         }
       },
+      "University.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.AspNetCore.App": "2.2.0",
+          "University.BLL": "1.0.0",
+          "University.DatabaseContexts": "1.0.0",
+          "University.Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/University.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/University.Configuration.dll": {}
+        }
+      },
       "University.DatabaseContexts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -13055,6 +13071,11 @@
       "path": "../University.BLL/University.BLL.csproj",
       "msbuildProject": "../University.BLL/University.BLL.csproj"
     },
+    "University.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../University.Configuration/University.Configuration.csproj",
+      "msbuildProject": "../University.Configuration/University.Configuration.csproj"
+    },
     "University.DatabaseContexts/1.0.0": {
       "type": "project",
       "path": "../University.DatabaseContexts/University.DatabaseContexts.csproj",
@@ -13078,6 +13099,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.0",
       "University.BLL >= 1.0.0",
+      "University.Configuration >= 1.0.0",
       "University.DatabaseContexts >= 1.0.0",
       "University.Repositories >= 1.0.0",
       "automapper.extensions.microsoft.dependencyinjection >= 6.0.0"
@@ -13090,11 +13112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
       "projectName": "UniversityApp",
-      "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\UniversityApp\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\UniversityApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13113,14 +13135,17 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\UniversityApp\\University.BLL\\University.BLL.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.BLL\\University.BLL.csproj"
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.BLL\\University.BLL.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.BLL\\University.BLL.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj"
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Configuration\\University.Configuration.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Configuration\\University.Configuration.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Repositories\\University.Repositories.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Repositories\\University.Repositories.csproj"
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.DatabaseContexts\\University.DatabaseContexts.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Repositories\\University.Repositories.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Repositories\\University.Repositories.csproj"
             }
           }
         }

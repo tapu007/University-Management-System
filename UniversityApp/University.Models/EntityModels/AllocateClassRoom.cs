@@ -23,14 +23,17 @@ namespace University.Models.EntityModels
         public int DayId { get; set; }
         [Required(ErrorMessage = "Please enter from time")]
         [DisplayName("From Time")]
-        public string FromTime { get; set; }
+        public DateTime FromTime { get; set; }
         [Required(ErrorMessage = "Please enter to time")]
         [DisplayName("To Time")]
-        public string ToTime { get; set; }
-        [Required(ErrorMessage = "Please Select AM or PM ")]
-        public string TimeFromAMPM { get; set; }
-        [Required(ErrorMessage = "Please Select AM or PM")]
-        public string TimeToAMPM { get; set; }
+        public DateTime ToTime { get; set; }
+        //[Required(ErrorMessage = "Please Select AM or PM ")]
+        //public string TimeFromAMPM { get; set; }
+        //[Required(ErrorMessage = "Please Select AM or PM")]
+        //public string TimeToAMPM { get; set; }
+        [Required(ErrorMessage ="Select Is Active or not")]
+        public bool IsActive { get; set; }
+
 
     }
 }

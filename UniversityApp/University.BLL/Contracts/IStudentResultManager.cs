@@ -7,5 +7,6 @@ namespace University.BLL.Contracts
 {
     public interface IStudentResultManager : IManager<StudentResult>
     {
+        bool IsResultExist(StudentResult studentResult);
     }
 }

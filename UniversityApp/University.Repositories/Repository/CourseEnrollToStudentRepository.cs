@@ -14,8 +14,10 @@ namespace University.Repositories.Repository
         public List<CourseEnrollToStudent> GetCourseById(int studentId)
         {
             return db.CourseEnrollToStudents.Where(c => c.StudentId == studentId).ToList();
-
+            
         }
+
+        
 
         //public override bool Add(CourseEnrollToStudent courseEnrollToStudent)
         //{

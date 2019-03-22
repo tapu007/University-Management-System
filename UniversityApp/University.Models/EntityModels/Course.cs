@@ -15,7 +15,7 @@ namespace University.Models.EntityModels
         public int SemesterId { get; set; }
         public Semester Semester { get; set; }       
         public float Credit { get; set; }       
-        public List<Student> Students { get; set; }
+        public List<Student> Students { get; set; }       
 
 
 

@@ -4430,11 +4430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.BLL\\University.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.BLL\\University.BLL.csproj",
       "projectName": "University.BLL",
-      "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.BLL\\University.BLL.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.BLL\\University.BLL.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.BLL\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4453,8 +4453,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Repositories\\University.Repositories.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Repositories\\University.Repositories.csproj"
+            "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Repositories\\University.Repositories.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Repositories\\University.Repositories.csproj"
             }
           }
         }

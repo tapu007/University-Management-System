@@ -10,7 +10,7 @@ namespace University.Repositories.Contracts
         bool Add(T entity);
         ICollection<T> GetAll();
         T GetBy(int Id);
-
+        bool update(T entity);
 
     }
 }

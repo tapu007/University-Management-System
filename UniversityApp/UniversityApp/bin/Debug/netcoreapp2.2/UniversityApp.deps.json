@@ -29,6 +29,7 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.0",
           "University.BLL": "1.0.0",
+          "University.Configuration": "1.0.0",
           "University.DatabaseContexts": "1.0.0",
           "University.Repositories": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0"
@@ -556,6 +557,20 @@
         },
         "compile": {
           "University.BLL.dll": {}
+        }
+      },
+      "University.Configuration/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.App": "2.2.0",
+          "University.BLL": "1.0.0",
+          "University.DatabaseContexts": "1.0.0",
+          "University.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "University.Configuration.dll": {}
+        },
+        "compile": {
+          "University.Configuration.dll": {}
         }
       },
       "University.DatabaseContexts/1.0.0": {
@@ -3805,6 +3820,11 @@
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
     "University.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "University.Configuration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

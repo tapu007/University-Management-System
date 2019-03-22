@@ -17,7 +17,7 @@ namespace University.Models.EntityModels
         public int DepartmentId { get; set; }     
         [Required(ErrorMessage = "Please select Course Name")]
         [DisplayName("Course Name")]
-        public int CourseId { get; set; }
+        public int CourseId { get; set; }      
         [Required(ErrorMessage = "Please select Date")]
         [DisplayName("Date")]
         public DateTime EnrollDate { get; set; }

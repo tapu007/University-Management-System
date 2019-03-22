@@ -141,19 +141,13 @@ namespace University.DatabaseContexts.Migrations
 
                     b.Property<int>("DepartmentId");
 
-                    b.Property<string>("FromTime")
-                        .IsRequired();
+                    b.Property<DateTime>("FromTime");
+
+                    b.Property<bool>("IsActive");
 
                     b.Property<int>("RoomId");
 
-                    b.Property<string>("TimeFromAMPM")
-                        .IsRequired();
-
-                    b.Property<string>("TimeToAMPM")
-                        .IsRequired();
-
-                    b.Property<string>("ToTime")
-                        .IsRequired();
+                    b.Property<DateTime>("ToTime");
 
                     b.HasKey("AllocateClassroomId");
 
@@ -248,6 +242,8 @@ namespace University.DatabaseContexts.Migrations
 
                     b.Property<int>("DepartmentId");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<int>("TeacherId");
 
                     b.HasKey("CourseAssignToTeacherId");
@@ -270,6 +266,8 @@ namespace University.DatabaseContexts.Migrations
                     b.Property<int>("StudentId");
 
                     b.HasKey("CourseEnrollToStudentId");
+
+                    b.HasIndex("CourseId");
 
                     b.ToTable("CourseEnrollToStudents");
                 });
@@ -509,6 +507,14 @@ namespace University.DatabaseContexts.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("University.Models.EntityModels.CourseEnrollToStudent", b =>
+                {
+                    b.HasOne("University.Models.EntityModels.Course")
+                        .WithMany("CourseEnrollToStudents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("University.Models.EntityModels.Student", b =>
                 {
                     b.HasOne("University.Models.EntityModels.Course")
@@ -533,7 +539,7 @@ namespace University.DatabaseContexts.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("University.Models.EntityModels.Designation", "Designation")
-                        .WithMany("Teachers")
+                        .WithMany()
                         .HasForeignKey("DesignationId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

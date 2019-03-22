@@ -28,9 +28,11 @@ namespace UniversityApp.Models
         [Required(ErrorMessage = "Please enter to time")]
         [DisplayName("To Time")]
         public DateTime ToTime { get; set; }
-        [Required(ErrorMessage = "Please Select AM or PM ")]
-        public string TimeFromAMPM { get; set; }
-        [Required(ErrorMessage = "Please Select AM or PM")]
-        public string TimeToAMPM { get; set; }
+        [Required(ErrorMessage ="Select Is Active or Not")]
+        public bool IsActive { get; set; }
+        //[Required(ErrorMessage = "Please Select AM or PM ")]
+        //public string TimeFromAMPM { get; set; }
+        //[Required(ErrorMessage = "Please Select AM or PM")]
+        //public string TimeToAMPM { get; set; }
     }
 }

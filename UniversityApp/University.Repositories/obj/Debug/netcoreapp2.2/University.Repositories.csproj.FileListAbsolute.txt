@@ -12,3 +12,17 @@ C:\Users\User\source\repos\UniversityApp\University.Repositories\bin\Debug\netco
 C:\Users\User\source\repos\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.DatabaseContexts.pdb
 C:\Users\User\source\repos\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Models.pdb
 C:\Users\User\source\repos\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.csproj.CopyComplete
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Repositories.deps.json
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Repositories.dll
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Repositories.pdb
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.DatabaseContexts.dll
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Models.dll
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.DatabaseContexts.pdb
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\bin\Debug\netcoreapp2.2\University.Models.pdb
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.AssemblyInfo.cs
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.csproj.CopyComplete
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.dll
+C:\Users\User\Desktop\Asp.Net Core Project\University-Management-System\UniversityApp\University.Repositories\obj\Debug\netcoreapp2.2\University.Repositories.pdb

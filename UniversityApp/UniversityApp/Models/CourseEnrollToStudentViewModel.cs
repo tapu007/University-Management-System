@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using University.Models.EntityModels;
 
 namespace UniversityApp.Models
 {
@@ -25,6 +26,7 @@ namespace UniversityApp.Models
         [Required(ErrorMessage = "Please select Course Name")]
         [DisplayName("Course Name")]
         public int CourseId { get; set; }
+        
         [Required(ErrorMessage = "Please select Date")]
         [DisplayName("Date")]
         public DateTime EnrollDate { get; set; }

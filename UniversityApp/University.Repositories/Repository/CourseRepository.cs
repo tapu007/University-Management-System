@@ -23,6 +23,7 @@ namespace University.Repositories.Repository
 
         }
 
+
         public bool IsCourseCodeExist(string courseCode)
         {
             if (db.Courses.Any(c=>c.CourseCode == courseCode))

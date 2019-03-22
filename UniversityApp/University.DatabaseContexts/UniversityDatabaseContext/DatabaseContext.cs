@@ -59,6 +59,8 @@ namespace University.DatabaseContexts.UniversityDatabaseContext
                 .Property(c => c.CourseAssignToTeacherId).IsRequired();
             builder.Entity<CourseAssignToTeacher>()
                 .Property(c => c.CourseId).IsRequired();
+            builder.Entity<CourseAssignToTeacher>()
+               .Property(c => c.IsActive).IsRequired();
 
             builder.Entity<Teacher>().
                 Property(c => c.TeacherName).IsRequired();
@@ -91,6 +93,10 @@ namespace University.DatabaseContexts.UniversityDatabaseContext
                 .Property(c => c.Date).IsRequired();
 
             builder.Entity<Designation>().Property(e => e.DesignationName).IsRequired();
+
+            builder.Entity<StudentResult>().Property(e => e.StudentId).IsRequired();
+            builder.Entity<StudentResult>().Property(e => e.CourseId).IsRequired();
+            builder.Entity<StudentResult>().Property(e => e.GradePointId).IsRequired();
 
         }
 

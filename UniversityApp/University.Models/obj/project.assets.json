@@ -1163,11 +1163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Models\\University.Models.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Models\\University.Models.csproj",
       "projectName": "University.Models",
-      "projectPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Models\\University.Models.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Models\\University.Models.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\UniversityApp\\University.Models\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Asp.Net Core Project\\University-Management-System\\UniversityApp\\University.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

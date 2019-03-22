@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<University.Models.EntityModels.Course>
 
 <table class="table table-bordered table-active">
-    <thead>
+    <thead class="bg-secondary">
         <tr class="label-primary">
             <th>
                 @Html.DisplayNameFor(model => model.CourseCode)
@@ -13,10 +13,10 @@
                 @Html.DisplayNameFor(model => model.Credit)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DepartmentId)
+                @Html.DisplayNameFor(model => model.Department.DepartmentName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SemesterId)
+                @Html.DisplayNameFor(model => model.Semester.SemesterName)
             </th>
             <th></th>
         </tr>
@@ -35,10 +35,10 @@
                     @item.Credit
                 </td>
                 <td>
-                    @item.DepartmentId
+                    @item.Department.DepartmentName
                 </td>
                 <td>
-                    @item.SemesterId
+                    @item.Semester.SemesterName
                 </td>
                
             </tr>

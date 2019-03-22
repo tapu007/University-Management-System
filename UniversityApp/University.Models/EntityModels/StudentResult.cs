@@ -8,17 +8,9 @@ namespace University.Models.EntityModels
 {
     public class StudentResult
     {
-        public int StudentResultId { get; set; }
-        [Required(ErrorMessage = "Please select Student Reg:No")]
-        [DisplayName("Student Reg: No")]
-        public int StudentId { get; set; }
-               
-        [Required(ErrorMessage = "Please select Course Name")]
-        [DisplayName("Course Name")]
+        public int StudentResultId { get; set; }       
+        public int StudentId { get; set; }                   
         public int CourseId { get; set; }
-        
-        [Required(ErrorMessage = "Please Select a Grade Letter")]
-        [DisplayName("Select a Grade Letter")]
         public int GradePointId { get; set; }
 
 

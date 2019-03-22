@@ -12,6 +12,7 @@ namespace University.Models.EntityModels
         public int DepartmentId { get; set; }     
         public int CourseId { get; set; }
         public int TeacherId { get; set; }
+        public bool IsActive { get; set; }
       
     }
 }

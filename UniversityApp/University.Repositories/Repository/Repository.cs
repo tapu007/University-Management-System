@@ -22,6 +22,12 @@ namespace University.Repositories.Repository
             return db.SaveChanges() > 0;
 
         }
+        public virtual bool update(T entity)
+        {
+            Table.Update(entity);
+            return db.SaveChanges() > 0;
+
+        }
         public virtual ICollection<T> GetAll()
         {
 

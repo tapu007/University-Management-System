@@ -10,6 +10,10 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        @if (ViewBag.Message !=null)
+        {
+            <div class="alert-danger">@ViewBag.Message</div>
+        }
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -40,24 +44,29 @@
                 </select>
                 <span asp-validation-for="DayId" class="text-danger"></span>
             </div>
-            <div class="form-group" >
+            <div class="form-group">
                 <label asp-for="FromTime" class="control-label"></label>
                 <input asp-for="FromTime" name="FromTime" id="FromTime" class="form-control" />
                 @*<input type="radio" value="AM" />am
-                    <input type="radio" value="PM" />pm*@
-                @Html.RadioButtonFor(m => m.TimeFromAMPM, "AM")AM @Html.RadioButtonFor(m => m.TimeFromAMPM, "PM")PM
+            <input type="radio" value="PM" />pm*@
+                @*@Html.RadioButtonFor(m => m.TimeFromAMPM, "AM")AM @Html.RadioButtonFor(m => m.TimeFromAMPM, "PM")PM*@
                 <span asp-validation-for="FromTime" class="text-danger"></span>
             </div>
-            <div class="form-group" >
+            <div class="form-group">
                 <label asp-for="ToTime" class="control-label"></label>
                 <input asp-for="ToTime" name="ToTime" id="ToTime" class="form-control" />
 
                 @*<input type="radio" value="AM"  />am
-                    <input  type="radio" value="PM" />pm*@
+            <input  type="radio" value="PM" />pm*@
                 <span asp-validation-for="ToTime" class="text-danger"></span>
-                @Html.RadioButtonFor(m => m.TimeToAMPM, "AM")AM @Html.RadioButtonFor(m => m.TimeToAMPM, "PM")PM
+                @*@Html.RadioButtonFor(m => m.TimeToAMPM, "AM")AM @Html.RadioButtonFor(m => m.TimeToAMPM, "PM")PM*@
             </div>
-
+            <div class="forrm-group checkbox">
+                <input asp-for="IsActive" checked="checked" value="True" id="IsActive" />
+                <label asp-for="IsActive">
+                </label>
+                <span asp-validation-for="IsActive" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
